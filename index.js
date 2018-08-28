@@ -40,7 +40,6 @@ class Trip {
   this.id = ++tripId;
   this.driverId = driver.id;
   this.passengerId = passenger.id
-}
 
   driver() {
 
@@ -49,4 +48,5 @@ class Trip {
   passenger() {
 
   }
+}
 }
