@@ -7,6 +7,10 @@ class Driver {
   trips() {
 
   }
+
+  passengers() {
+    
+  }
 }
 
 class Passenger {
@@ -17,7 +21,7 @@ class Passenger {
   }
 
   trips()  {
-    
+
   }
 
   drivers() {
