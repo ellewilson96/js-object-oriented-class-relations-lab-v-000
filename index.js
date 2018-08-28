@@ -15,6 +15,14 @@ class Passenger {
     this.name = name;
     this.driverId = driver.id;
   }
+
+  trips()  {
+    
+  }
+
+  drivers() {
+    
+  }
 }
 
 class Trip {
