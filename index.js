@@ -29,32 +29,36 @@ class Passenger {
   constructor(name) {
     this.id = ++passengerId;
     this.name = name;
-    this.driverId = driver.id;
-
-  trips()  {
-
+    store.passengers.push(this);
   }
 
-  drivers() {
-
-  }
-
-  store.passengers.push(this)
+trips() {
+  return store.trips.filter(trip => {
+    return trip.passengerId == this.id;
+  });
 }
+drivers() {
+  return this.trips().map(trip => {
+    return trip.driver();
+  });
+  }
 }
 
 class Trip {
-  constructor(driverId, passengerId) {
+  constructor(driver, passenger) {
   this.id = ++tripId;
   this.driverId = driver.id;
   this.passengerId = passenger.id
-
-  driver() {
-
-  }
-
-  passenger() {
-
-  }
-}
+  store.trips.push(this);
+   }
+   driver() {
+     return store.drivers.find(driver => {
+       return driver.id === this.driverId;
+     });
+   }
+   passenger() {
+     return store.passengers.find(passenger => {
+       return passenger.id === this.passengerId;
+     });
+   }
 }
