@@ -4,3 +4,10 @@ class Driver {
   this.name = name;
   }
 }
+
+class Passenger {
+  constructor(name, driverId) {
+    this.name = name;
+    this.driverId = driver.id;
+  }
+}
