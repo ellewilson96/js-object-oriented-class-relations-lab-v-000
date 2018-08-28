@@ -6,6 +6,8 @@ class Driver {
   this.name = name;
   }
 
+  store.drivers.push(this)
+
   trips() {
 
   }
@@ -29,6 +31,8 @@ class Passenger {
   drivers() {
 
   }
+
+  store.passengers.push(this)
 }
 
 class Trip {
