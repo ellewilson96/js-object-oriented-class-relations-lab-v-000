@@ -1,6 +1,5 @@
 let store = {drivers: [], passengers: [], trips: []}
 
-
 class Driver {
   constructor(id, name) {
   this.id = ++driverId;
